@@ -80,6 +80,10 @@ print("Numbers after removing 3:", numbers)  # This line prints the updated numb
 numbers[1] = 20  # This line updates the value at index 1 of the numbers list to 20. Since lists are mutable, you can change the values of existing elements by assigning a new value to a specific index.
 print("Numbers after updating index 1 to 20:", numbers)  # This line prints the updated numbers list, which now has the value 20 at index 1. The output will be [1, 20, 4, 5].
 print(len(numbers))  # This line prints the length of the numbers list, which is 4. The len() function is used to get the number of elements in a list. 
+fruits.insert(1, "grape")  # This line inserts the string "grape" at index 1 of the fruits list. The insert() method is used to add an element at a specific index in a list, shifting the existing elements to the right.
+print("Fruits after inserting grape at index 1:", fruits)  # This line prints the updated fruits list, which now includes "grape" at index 1. The output will be ['apple', 'grape', 'banana', 'cherry', 'orange'].
+fruits.pop()  # This line removes the last element from the fruits list. The pop() method is used to remove and return the last element of a list. If you want to remove an element at a specific index, you can pass the index as an argument to pop(), like fruits.pop(1) to remove the element at index 1.
+print("Fruits after popping the last element:", fruits)  # This line prints the updated fruits list after removing the last element, which will be ['apple', 'grape', 'banana', 'cherry'] since "orange" was removed by the pop() method.
 
 # ? Itrating through a list
 # You can iterate through a list using a for loop to access each element one by one.
@@ -169,3 +173,16 @@ employee = ("Kartik", 25)  # This line creates a tuple variable named employee t
 name,age = employee
 print(name)
 print(age)
+
+
+
+# ? Practise datatype
+colors = ("red", "green", "blue","yellow" ,"orange")  # This line creates a tuple variable named colors that contains five string elements: "red", "green", "blue", "yellow", and "orange". Tuples are defined using parentheses () and the elements are separated by commas.
+print(colors)  # This line prints the colors tuple, which will output ('red', 'green', 'blue', 'yellow', 'orange').
+for color in colors:
+    print("colors of the day:", color)  # This line prints each color in the colors tuple on a new line. The for loop iterates through each element in the tuple and assigns it to the variable 'color' in each iteration, allowing you to perform operations on it (in this case, printing it).
+    print(len(color))  # This line prints the length of each color string in the colors tuple. The len() function is used to get the number of characters in each color string.
+    print("access color by index:", colors.index(color))  # This line prints the index of each color in the colors tuple. The index() method is used to find the position of an element in a tuple.
+    print("access color by slicing:", colors[colors.index(color)])  # This line prints each color in the colors tuple by accessing it through slicing. The expression colors[colors.index(color)] retrieves the color at the index found by the index() method, which will output the same color as the current iteration of the loop.
+    print("access color by negative index:", colors[-(colors.index(color)+1)])  # This line prints each color in the colors tuple by accessing it through negative indexing. The expression colors[-(colors.index(color)+1)] retrieves the color at the negative index corresponding to its position in the tuple, which will also output the same color as the current iteration of the loop.
+

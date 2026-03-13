@@ -84,12 +84,16 @@ print("Total Overtime Pay:", total_overtime_pay)
 print("Number of Overtime Days:", overtime_days)    
 
 
-numbers = [12, 45, 7, 89, 23]
+numbers = [12, 45, 7, 89, 23, 2]
 maxno = numbers[0]
+minno = numbers[0]
 for num in numbers:
     if num > maxno:
         maxno = num 
+    elif num < minno:
+        minno = num
 print("The largest number in the list is:", maxno)
+print("The smallest number in the list is:", minno)
 
 
 student = {
