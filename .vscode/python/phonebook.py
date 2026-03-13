@@ -21,10 +21,10 @@ for name, number in phone_book.items():
 
 
 print(f"{YELLOW}------Searching Contacts in Phone Book------{RESET}") 
-names_to_search = ("Alice", "Kartik", "Bob")  # List of names to search for
+# names_to_search = ("Alice", "Kartik", "Bob")  # List of names to search for
 search_name = "Charlie"  # Single name to search (or you can remove this if focusing on the tuple)
 
-for search in names_to_search:
+for search in phone_book.keys():
     if search in phone_book:
         print(f"{GREEN}Contact found: {search} --> {phone_book[search]}{RESET}")
     else:
@@ -52,3 +52,13 @@ for name, number in phone_book.items():
     print(f"{BLUE} PhoneBook : {name}: {number}{RESET}")  # This line iterates through each key-value pair in the phone_book dictionary and prints the name and corresponding phone number in a formatted string. After the deletion of "Bob", this will output the remaining contacts: "Kartik" and "Alice" with their respective phone numbers.
 
 
+
+# also we can write like this as well given below this will also work the same as above code for displaying contacts from phone book after deletion
+phone_book = {
+    "Kartik": "123-456-7890",
+    "Alice": "987-654-3210",
+    "Bob": "555-555-5555"
+}
+
+for name, number in phone_book.items():
+    print(f"{name} : {number}")  # This line iterates through each key-value pair in the phone_book dictionary and prints the name and corresponding phone number in a formatted string. The items() method is used to get a view object of the dictionary's key-value pairs, which allows us to access both the name (key) and number (value) in each iteration of the loop.   
